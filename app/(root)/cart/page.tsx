@@ -1,5 +1,6 @@
 "use client";
 
+import Form from "@/components/Form";
 import useCart from "@/lib/hooks/useCart";
 
 import { useUser } from "@clerk/nextjs";
@@ -70,7 +71,7 @@ const Cart = () => {
                     {cartItem.size && (
                       <p className="text-small-medium">{cartItem.size}</p>
                     )}
-                    <p className="text-small-medium">${cartItem.item.price}</p>
+                    <p className="text-small-medium">{cartItem.item.price} DT</p>
                   </div>
                 </div>
 
@@ -105,14 +106,9 @@ const Cart = () => {
         </p>
         <div className="flex justify-between text-body-semibold">
           <span>Total Amount</span>
-          <span>$ {totalRounded}</span>
+          <span>{totalRounded} DT</span>
         </div>
-        <button
-          className="border rounded-lg text-body-bold bg-white py-3 w-full hover:bg-black hover:text-white"
-          onClick={handleCheckout}
-        >
-          Proceed to Checkout
-        </button>
+        <Form/>
       </div>
     </div>
   );
