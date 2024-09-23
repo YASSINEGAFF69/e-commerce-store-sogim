@@ -1,22 +1,18 @@
-import Footer from 'rc-footer';
-import 'rc-footer/assets/index.css'; 
-import { forwardRef } from 'react';
+import { forwardRef, ForwardedRef } from 'react';
 
-const FooterCom = forwardRef((props, ref) => (
-  <div ref={ref}>
-    <Footer
-      columns={[
-        {
-          title: 'Contactez-nous',
-          items: [
-            { title: 'Adresse postale', description: '15 rue France, Ben Arous' },
-            { title: 'Adresse e-mail', description: 'sogim2013@yahoo.fr', link: 'mailto:sogim2013@yahoo.fr' },
-            { title: 'Numéro de téléphone', description: '+216 22 054 709', link: 'tel:+21622054709' },
-          ],
-        },
-      ]}
-      bottom="Made by yassine gafsaoui"
-    />
+const FooterCom = forwardRef<HTMLDivElement>((props, ref: ForwardedRef<HTMLDivElement>) => (
+  <div ref={ref} className="footer bg-gray-100 py-6">
+    <div className="container mx-auto text-center">
+      <h3 className="font-bold text-lg mb-4">Contactez-nous</h3>
+      <p className="mb-2">Adresse postale: 15 rue France, Ben Arous</p>
+      <p className="mb-2">
+        Adresse e-mail: <a href="mailto:sogim2013@yahoo.fr" className="text-blue-500">sogim2013@yahoo.fr</a>
+      </p>
+      <p className="mb-4">
+        Numéro de téléphone: <a href="tel:+21622054709" className="text-blue-500">+216 22 054 709</a>
+      </p>
+      <p className="text-gray-500">Made by Yassine Gafsaoui</p>
+    </div>
   </div>
 ));
 

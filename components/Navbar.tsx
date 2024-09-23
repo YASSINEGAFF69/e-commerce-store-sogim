@@ -7,7 +7,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useState, useRef } from "react";
-import FooterCom from "./FooterCom";// Assuming you imported your Footer
 
 const Navbar = () => {
   const pathname = usePathname();
@@ -91,12 +90,7 @@ const Navbar = () => {
               >
                 Wishlist
               </Link>
-              <Link
-                href={user ? "/orders" : "/sign-in"}
-                className="hover:text-red-1"
-              >
-                Orders
-              </Link>
+              
               
               <Link
                 href="/cart"
@@ -118,7 +112,7 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Pass the footer ref */}
+      {/* Footer component with the ref passed down */}
       
     </>
   );
