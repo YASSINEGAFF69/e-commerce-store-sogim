@@ -108,7 +108,7 @@ const Cart = () => {
           <span>Total Amount</span>
           <span>{totalRounded} DT</span>
         </div>
-        <Form/>
+        <Form cartItems={cart.cartItems} />
       </div>
     </div>
   );
