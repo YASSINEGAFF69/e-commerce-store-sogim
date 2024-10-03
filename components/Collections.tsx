@@ -13,15 +13,15 @@ const Collections = async () => {
       ) : (
         <div className="flex flex-wrap items-center justify-center gap-8">
           {collections.map((collection: CollectionType) => (
-            <Link href={`/collections/${collection._id}`} key={collection._id}>
+            <Link href={`/collections/${collection._id}`} key={collection._id} className="relative">
               <Image
-                key={collection._id}
                 src={collection.image}
                 alt={collection.title}
                 width={350}
                 height={200}
                 className="rounded-lg cursor-pointer"
               />
+              <p className="absolute inset-0 flex items-center justify-center text-heading3-bold text-red-700 bg-red-700 bg-opacity-5 rounded-lg">{collection.title}</p>
             </Link>
           ))}
         </div>

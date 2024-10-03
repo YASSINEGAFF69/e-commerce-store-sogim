@@ -1,5 +1,8 @@
-import React from 'react';
+"use client"; // This directive makes the component a client component
+
+import React, { useEffect, useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
+import { useUser } from '@clerk/nextjs'; // Assuming you're using Clerk
 
 interface CartItem {
   item: {
@@ -42,11 +45,11 @@ function ContactForm({ cartItems }: ContactFormProps) {
       </label>
 
       <label htmlFor="message" className="flex flex-col items-start gap-2 w-full">
-        <span className="text-lg text-slate-600">Message</span>
+        <span className="text-lg text-slate-600">Demande:</span>
         <textarea
           id="message"
           name="message"
-          defaultValue={`I want to list all the items and their quantities:\n${defaultMessage}\nAddress:\nNumber:`} 
+          defaultValue={`vous produits:\n${defaultMessage}\nAddress:\nNumber:`} 
           className="border border-slate-600 bg-slate-50 text-slate-400 p-2 rounded-md w-full min-h-[200px] max-h-[900px]"
         />
         <ValidationError 
@@ -68,9 +71,21 @@ interface FormProps {
 }
 
 function Form({ cartItems }: FormProps) {
-  return (
-    <ContactForm cartItems={cartItems} />
-  );
+  const { isSignedIn } = useUser(); // Assuming you're using Clerk
+
+  useEffect(() => {
+    if (!isSignedIn) {
+      // Optionally, redirect the user to the sign-in page or handle it accordingly
+      window.location.href = '/sign-in'; // This will redirect to the sign-in page
+    }
+  }, [isSignedIn]);
+
+  // Only render the form if the user is signed in
+  if (!isSignedIn) {
+    return null; // Optionally, you could return a loading spinner or message here
+  }
+
+  return <ContactForm cartItems={cartItems} />;
 }
 
 export default Form;
