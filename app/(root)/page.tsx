@@ -14,7 +14,7 @@ export default function Home() {
       <Collections />
       <ProductList />
       <AboutUs/>
-      <Contacts/>
+      <FooterCom/>
     </>
   );
 }

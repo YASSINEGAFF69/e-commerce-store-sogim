@@ -11,7 +11,6 @@ const FooterCom = forwardRef<HTMLDivElement>((props, ref: ForwardedRef<HTMLDivEl
       <p className="mb-4">
         Numéro de téléphone: <a href="tel:+21622054709" className="text-blue-500">+216 22 054 709</a>
       </p>
-      <p className="text-gray-500">Made by Yassine Gafsaoui</p>
     </div>
   </div>
 ));

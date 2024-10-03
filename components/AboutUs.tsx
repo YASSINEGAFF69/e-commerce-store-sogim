@@ -15,10 +15,10 @@ const AboutUs: React.FC = () => {
 
         {/* Text Content Section */}
         <div className="text-center">
-          <span className="text-gray-500 border-b-2 border-indigo-600 uppercase">un bon service , pour toujours</span>
-          <h2 className="my-4 font-bold text-3xl sm:text-4xl">
-          avec <span className="text-indigo-600">sogim </span>tout va bien!
-          </h2>
+          <span className="text-gray-500 border-b-2 border-sky-300 uppercase">un bon service , pour toujours</span>
+          <h1 className="my-4 font-bold  text-heading2-bold sm:text-heading1-bold">
+          avec <span className="text-sky-500">Sogim </span>tout va bien!
+          </h1>
           <p className="text-gray-700">
           SOGIM est une société spécialisée dans la vente d'outils industriels via un site e-commerce dédié. Leur plateforme en ligne propose une large gamme d'équipements et d'outillage de qualité pour les professionnels de l'industrie. Le site met en avant des produits tels que des machines-outils, des instruments de mesure, des équipements de sécurité, ainsi que des pièces de rechange. Avec une interface simple et intuitive, SOGIM facilite la navigation et l'achat en ligne, tout en offrant un service client réactif et des options de livraison rapide.
           </p>
