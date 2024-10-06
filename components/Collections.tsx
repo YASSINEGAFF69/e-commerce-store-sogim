@@ -21,7 +21,7 @@ const Collections = async () => {
                 height={200}
                 className="rounded-lg cursor-pointer"
               />
-              <p className="absolute inset-0 flex items-center justify-center text-heading3-bold text-red-700 bg-red-700 bg-opacity-5 rounded-lg">{collection.title}</p>
+              <p className="absolute inset-0 flex items-center justify-center text-heading3-bold text-red-800 bg-black bg-opacity-40 rounded-lg">{collection.title}</p>
             </Link>
           ))}
         </div>

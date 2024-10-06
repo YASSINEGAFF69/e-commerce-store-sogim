@@ -43,29 +43,27 @@ const Contacts: React.FC = () => {
                   </a>
                 </div>
                 <div className="px-6 py-4">
-                  <h3 className="text-lg font-medium text-gray-900">Our Address</h3>
-                  <p className="mt-1 text-gray-600">Sale galli, 60 foot road, Latur</p>
+                  <h3 className="text-lg font-medium text-gray-900">notre Address</h3>
+                  <p className="mt-1 text-gray-600">15 rue France, Ben Arous</p>
                 </div>
-                <div className="border-t border-gray-200 px-6 py-4">
+                {/* <div className="border-t border-gray-200 px-6 py-4">
                   <h3 className="text-lg font-medium text-gray-900">Hours</h3>
                   <p className="mt-1 text-gray-600">Monday - Sunday: 2pm - 9pm</p>
-                </div>
+                </div> */}
               </div>
             </div>
 
             {/* Google Maps Embed Section */}
-            <div className="rounded-lg overflow-hidden order-none sm:order-first">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3785.7850672491236!2d76.58802159999999!3d18.402630699999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcf83ca88e84341%3A0x841e547bf3ad066d!2zQmFwcGEgZmxvdXIgbWlsbCB8IOCkrOCkquCljeCkquCkviDgpKrgpYDgpKAg4KSX4KS_4KSw4KSj4KWALCDgpK7gpL_gpLDgpJrgpYAg4KSV4KS-4KSC4KSh4KSqIOCkhuCko-CkvyDgpLbgpYfgpLXgpL7gpK_gpL4!5e0!3m2!1sen!2sin!4v1713433597892!5m2!1sen!2sin"
-                className="w-full"
-                width="600"
-                height="450"
-                style={{ border: 0 }}
-                allowFullScreen
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
+            <div className="rounded-lg overflow-hidden order-none sm:order-first w-full h-96">
+  <iframe
+    src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDQPz7-gMiD7unnSIgcD1ycwH1xoFYbCcY&q=Ben+Arous,Tunis"
+    className="w-full h-full border-0"
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
+</div>
+
           </div>
         </div>
       </div>
